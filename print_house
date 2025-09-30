@@ -1,0 +1,87 @@
+/* To print the pattern of a house,
+
+ 	 	 	 	$	 	 	 	 	
+ 	 	 	$	 	$	 	 	 	
+ 	 	$	 	 	 	$	 	 	
+ 	$	 	 	 	 	 	$	 	
+*	*	*	*	*	*	*	*	*	
+@	#	#	 	 	 	#	#	@	
+@	#	#	 	 	 	#	#	@	
+@								@	
+@			@	@	@			@	
+@			@		@			@	
+@	@	@	@	@	@	@	@	@       
+
+*/
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#include <stdio.h>                //program starts here
+int main()
+{  int i,j;                       //variables declared for the loops
+    for(i=1;i<=5;i++)             //loop starts for printing the roof
+     {for(j=1;j<=9;j++)
+        {if(i==1)
+            {if(j==5)
+            printf("$\t");
+            else
+            printf(" \t");
+            }
+        else if(i==2)
+            {if(j==4 || j==6)
+            printf("$\t");
+            else
+            printf(" \t");
+            }
+        else if(i==3)
+            {if(j==3 || j==7)
+            printf("$\t");
+            else 
+            printf(" \t");
+            }
+        else if(i==4)
+            {if(j==2 || j==8)
+            printf("$\t");
+            else 
+            printf(" \t");
+            }
+        else
+            {printf("*\t");
+            } }
+      printf("\n");
+     }                             //end of the 1st for loop for printing the roof of the house
+
+    for(i=1;i<=6;i++)              //2nd for loop for printing the walls, windows and door of the house
+    { for(j=1;j<=9;j++)
+        {
+          if(i==6)
+            {printf("@\t");
+            }
+          else if(i==5)
+            {if (j==1 || j==4||j==6||j==9)      //printing the door along with the walls
+            printf("@\t");
+            else 
+            printf("\t");
+            }
+          else if(i==4)
+            {if (j==2||j==3||j==7||j==8)
+            printf("\t");
+            else printf("@\t");
+            }
+          else if(i==3)
+            {if(j==1||j==9)
+            printf("@\t");
+            else
+            printf("\t");
+            }
+          else
+            {if(j==1 || j==9)
+            printf("@\t");
+            else if(j==2||j==3||j==7||j==8)      //printing the windows
+            printf("#\t");
+            else 
+            printf(" \t");
+            }
+        }
+            printf("\n");
+    }                                        //end of the 2nd for loop for printing the base (Walls, Windows and Door) of the house
+return 0;
+}                                            //end of program
