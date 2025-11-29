@@ -1,4 +1,4 @@
-Simplified linear version of the code for reference and to ensure better readability:
+Simplified linear version of the donut.c code for reference and to ensure better readability:
 
 	#include <stdio.h>
 	#include <string.h>
