@@ -3,6 +3,6 @@
 #include <stdio.h>        //preprocessor directive, including stdio.h header file for standard input and output
 void main (void)          //using void so that return statement need not be written
 {
-if (printf("Preetika"))   //use of conditipnal statement to print the name, it returns 'true' to the if statement
+if (printf("Preetika"))   //use of conditional statement to print the name, it returns 'true' to the if statement
 { }                       //empty if body
 }                         //end of main
